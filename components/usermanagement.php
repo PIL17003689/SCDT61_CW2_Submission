@@ -102,7 +102,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST')
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-        <!-- Add your modal content here -->
         <p>This is the content of the pop-up.</p>
         <?php if (isset($mem['ID'])): ?>
         <form id="updateMemberForm<?= $mem['ID'] ?>" action="<?= htmlspecialchars($_SERVER['PHP_SELF']) ?>" method="post">
@@ -117,7 +116,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST')
                 </div>
                 <div class="mb-3">
                     <div class="dropdown">
-                        <button class="dropbtn">Dropdown</button>
                         <label for="memRole" class="form-label">User Role:</label>
                         <textarea class="form-control" id="memRole" name="role" required><?= htmlspecialchars($memRole) ?></textarea>
                     </div>

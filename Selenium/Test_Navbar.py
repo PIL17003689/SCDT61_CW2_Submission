@@ -26,5 +26,5 @@ Click_Input_by_Text("a", "Login")
 time.sleep(2)
 Click_Input_by_Text("a", "Online Shop")
 
-
-time.sleep(5)
+time.sleep(3)
+driver.quit()

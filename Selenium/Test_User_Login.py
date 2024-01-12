@@ -25,5 +25,5 @@ Placeholder_Input("Password", "Test123!")
 time.sleep(2)
 Click_Input_by_Text("button", "Login")
 
-
 time.sleep(3)
+driver.quit()

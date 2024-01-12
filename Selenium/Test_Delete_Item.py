@@ -33,3 +33,5 @@ Click_Input_by_Text("button", "Delete Item")
 time.sleep(1)
 Click_Input_by_Text("button", "Delete Item")
 time.sleep(1)
+
+driver.quit()
