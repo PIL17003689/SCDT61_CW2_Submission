@@ -18,25 +18,25 @@ if (isset($_SESSION['user'])) {
     redirect('login', ["error" => "You need to be logged in to view this page"]);
 }
 
+// Check if the form is submitted via POST
 if ($_SERVER['REQUEST_METHOD'] == 'POST')
 {
     if((isset($_POST['UpdateMemberButton'])))
     {
+        // Process the submitted form data
         $fname = InputProcessor::ProcessString($_POST['firstname']);
         $lname = InputProcessor::ProcessString($_POST['lastname']);
         $role = InputProcessor::ProcessString($_POST['role']);
 
+        // Prepare the data
         $args = [
             'id' => $_POST['memId'],
             'name' => $fname['value'],
             'description' => $lname['value'],
             'role' => $role['value'],
         ];
-        $args_ = [
 
-        ];
-        // Work on <---
-
+        // Updates the member info and role
         $oldMem = $controllers->Members()->update_member($args);
         $oldRoles = $controllers->Members()->update_user_roles($args_);
         if ($oldMem && $oldRoles) 
@@ -51,7 +51,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST')
         $delMember = $controllers->Member()->delete_member($memId);
 
         if ($delMember) {
-            // Optionally, redirect or perform other actions after successful deletion
+            // Redirection 
             redirect('UserManagement');
         } else {
             // Handle deletion failure
