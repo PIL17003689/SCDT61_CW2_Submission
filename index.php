@@ -1,4 +1,4 @@
-<?php $title = 'Gormet Grocers'
+<?php $title = 'Gormet Grocers';
 require __DIR__ . "/inc/header.php"; ?>
 
 
